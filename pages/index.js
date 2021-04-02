@@ -36,12 +36,12 @@ export default function Home() {
         </Menu>
       
         
-          <Heading1 light content="Do you want to speak French with ease and confidence?"/>
+          <Heading1 content="Do you want to speak French with ease and confidence?"/>
           <Div>
             <Img src={linguanastya} />
           </Div>
           <Text content="Hi, my name is Anastasia. I’m a web developer with linguistics background based in Los Angeles, California. I’m here to help you break speaking barrier, enhance your listening skills, and become confident while speaking French." />
-          <SocialBtns />
+          <SocialBtns primary></SocialBtns>
           
           
     </Section>
@@ -108,16 +108,3 @@ const Box = styled.div`
 const Arrow = styled.img`
   width: 22px;
 `
-
-
-
-// const A = styled.a`
-//   margin-left: 0.5rem;
-//   font-weight: 300;
-//   color: #F7F6EB;
-//   cursor: pointer;
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// `
