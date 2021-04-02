@@ -7,6 +7,8 @@ import Link from 'next/link'
 import Heading1 from '../Components/Heading1'
 import Heading2 from '../Components/Heading2'
 import Text from '../Components/Text'
+import SocialBtns from '../Components/SocialBtns'
+
 import linguanastya from '../public/images/anastasia.png'
 import circle from '../public/images/circle.png'
 import arrowLeft from '../public/images/arrow-left.svg'
@@ -35,11 +37,12 @@ export default function Home() {
       
         
           <Heading1 light content="Do you want to speak French with ease and confidence?"/>
-          <div>
+          <Div>
             <Img src={linguanastya} />
-          </div>
-          <Text content="We learn French not to conjugate verbs but to communicate with people.​  Agree? But how to speak if you can’t pronounce each French sound? How to understand if your ears can’t get the difference between similar sounds of French? Sound is the foundation of a language." />
-          <Text content="How did you learn your native language when you were a child?  First you picked up sounds and syllables, then words, phrases. Now you speak it fluently. Go to my blog or youtube channel to find out how you can use the same tactic to succeed in French." />
+          </Div>
+          <Text content="Hi, my name is Anastasia. I’m a web developer with linguistics background based in Los Angeles, California. I’m here to help you break speaking barrier, enhance your listening skills, and become confident while speaking French." />
+          <SocialBtns light/>
+          
           
     </Section>
   )
@@ -57,13 +60,25 @@ const Section = styled.section`
   align-items: center;
 `
 
+const Div = styled.div`
+  margin: 2rem;
+  height: 220px;
+  width: 220px;
+  background: url(${circle}) no-repeat;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const Img = styled.img`
   width: 200px;
   height: 200px;
 `
 
 const Menu = styled.nav`
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -92,6 +107,8 @@ const Box = styled.div`
 const Arrow = styled.img`
   width: 22px;
 `
+
+
 
 // const A = styled.a`
 //   margin-left: 0.5rem;
