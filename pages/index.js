@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import Heading1 from '../Components/Heading1'
 import Heading2 from '../Components/Heading2'
 import Text from '../Components/Text'
-import Linguanastya from '../public/images/anastasia.png'
+// import Linguanastya from '../public/images/anastasia.png'
 
 
 
@@ -14,13 +14,14 @@ export default function Home() {
   return (
     <Section>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+          <title>FrenchSound</title>
+          <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Section >
         <Heading1 light center content="Do you want to speak French with ease and confidence?"/>
         <div>
-          <Img src={Linguanastya} />
+          {/* <Img src={Linguanastya} /> */}
         </div>
         <Text content="We learn French not to conjugate verbs but to communicate with people.​  Agree? But how to speak if you can’t pronounce each French sound? How to understand if your ears can’t get the difference between similar sounds of French? Sound is the foundation of a language." />
         <Text content="How did you learn your native language when you were a child?  First you picked up sounds and syllables, then words, phrases. Now you speak it fluently. Go to my blog or youtube channel to find out how you can use the same tactic to succeed in French." />
