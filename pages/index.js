@@ -1,65 +1,49 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import styled from 'styled-components'
+
+// Components
+import Heading1 from '../Components/Heading1'
+import Heading2 from '../Components/Heading2'
+import Text from '../Components/Text'
+import Linguanastya from '../public/images/anastasia.png'
+
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Section>
       <Head>
-        <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <Section >
+        <Heading1 light center content="Do you want to speak French with ease and confidence?"/>
+        <div>
+          <Img src={Linguanastya} />
         </div>
-      </main>
+        <Text content="We learn French not to conjugate verbs but to communicate with people.​  Agree? But how to speak if you can’t pronounce each French sound? How to understand if your ears can’t get the difference between similar sounds of French? Sound is the foundation of a language." />
+        <Text content="How did you learn your native language when you were a child?  First you picked up sounds and syllables, then words, phrases. Now you speak it fluently. Go to my blog or youtube channel to find out how you can use the same tactic to succeed in French." />
+      </Section>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      
+    </Section>
   )
 }
+
+const Section = styled.section`
+  height: 100vh;
+  width: 100%;
+  background: #314654;
+  padding: 3rem 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Img = styled.img`
+  width: 100px;
+  height: 100px;
+`
