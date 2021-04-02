@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import instagram from '../public/images/icon-instagram.svg'
-import youtube from '../public/images/icon-youtube-light.svg'
-import twitter from '../public/images/icon-twitter-light.svg'
 
-const SocialBtns = () => {
+
+const SocialBtns = (props) => {
+    console.log(props); 
     return (
         <Div>
             <a href="https://www.instagram.com/linguanastya/" ><svg viewBox="0 0 512 512">
@@ -24,7 +23,6 @@ const SocialBtns = () => {
 
 export default SocialBtns;
 
-
 const Div = styled.div`
     display: flex;
     flex-direction: row;
@@ -34,13 +32,14 @@ const Div = styled.div`
         width: 30px;
         height: 30px;
         margin:  2rem 1rem;
-        fill: #EDEBE8;
+        fill: #EDEBE8; 
         border-radius: 20px;
         cursor: pointer;
         transition: all 0.4s ease;
 
         &:hover {
-            fill: #5AAFC3;
+            fill: #BE4357;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 10%)
         }
     }
-`
+    `

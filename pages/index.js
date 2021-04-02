@@ -41,7 +41,7 @@ export default function Home() {
             <Img src={linguanastya} />
           </Div>
           <Text content="Hi, my name is Anastasia. I’m a web developer with linguistics background based in Los Angeles, California. I’m here to help you break speaking barrier, enhance your listening skills, and become confident while speaking French." />
-          <SocialBtns light/>
+          <SocialBtns />
           
           
     </Section>
@@ -97,6 +97,7 @@ const Box = styled.div`
     font-weight: 300;
     color: #F7F6EB;
     cursor: pointer;
+    transition: all 0.4s ease;
   }
 
   a:hover{
