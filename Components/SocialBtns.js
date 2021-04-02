@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 
 const SocialBtns = (props) => {
-    console.log(props); 
     return (
         <Div primary={props.primary}>
             <a href="https://www.instagram.com/linguanastya/" ><svg viewBox="0 0 512 512">
@@ -39,7 +38,6 @@ const Div = styled.div`
 
         &:hover {
             fill: #BE4357;
-            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 10%)
         }
     }
-    `
+`

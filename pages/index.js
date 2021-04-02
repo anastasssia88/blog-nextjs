@@ -36,7 +36,8 @@ export default function Home() {
         </Menu>
       
         
-          <Heading1 content="Do you want to speak French with ease and confidence?"/>
+          <Heading1 content="Do you want to speak 
+          French with ease and confidence?"/>
           <Div>
             <Img src={linguanastya} />
           </Div>
@@ -58,6 +59,16 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    height: 100vh;
+    padding: 1rem 10rem;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 2rem 2rem;
+  }
 `
 
 const Div = styled.div`

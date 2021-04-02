@@ -15,4 +15,5 @@ const P = styled.p`
     font-size: ${ props => props.sm ? '16px' : '22px'};
     font-weight: 300;
     padding: 0.5rem 0rem;
+
 `
