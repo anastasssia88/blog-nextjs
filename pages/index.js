@@ -6,7 +6,8 @@ import styled from 'styled-components'
 import Heading1 from '../Components/Heading1'
 import Heading2 from '../Components/Heading2'
 import Text from '../Components/Text'
-// import Linguanastya from '../public/images/anastasia.png'
+import linguanastya from '../public/images/anastasia.png'
+import circle from '../public/images/circle.png'
 
 
 
@@ -19,9 +20,9 @@ export default function Home() {
       </Head>
 
       <Section >
-        <Heading1 light center content="Do you want to speak French with ease and confidence?"/>
+        <Heading1 light content="Do you want to speak French with ease and confidence?"/>
         <div>
-          {/* <Img src={Linguanastya} /> */}
+          <Img src={linguanastya} />
         </div>
         <Text content="We learn French not to conjugate verbs but to communicate with people.​  Agree? But how to speak if you can’t pronounce each French sound? How to understand if your ears can’t get the difference between similar sounds of French? Sound is the foundation of a language." />
         <Text content="How did you learn your native language when you were a child?  First you picked up sounds and syllables, then words, phrases. Now you speak it fluently. Go to my blog or youtube channel to find out how you can use the same tactic to succeed in French." />
@@ -44,7 +45,9 @@ const Section = styled.section`
   align-items: center;
 `
 
+
+
 const Img = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 `

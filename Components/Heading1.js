@@ -12,6 +12,6 @@ export default Heading1;
 
 const H1 = styled.h1`
     color: ${props => props.light ? '#314654' : '#EDEBE8'};
-    text-align: ${props => props.center && 'center'};
+    text-align: center;
 `
 
