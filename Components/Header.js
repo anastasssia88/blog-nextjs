@@ -28,4 +28,8 @@ const A = styled.a`
     color: #314654;
     cursor: pointer;
     transition: all 0.4s ease;
+
+    &:hover{
+        color: #BE4357;
+    }
 `
