@@ -10,6 +10,7 @@ import Text from '../Components/Text'
 import SocialBtns from '../Components/SocialBtns'
 import Avatar from '../Components/Avatar'
 
+
 import linguanastya from '../public/images/anastasia.png'
 import circle from '../public/images/circle.png'
 import arrowLeft from '../public/images/arrow-left.svg'
@@ -28,7 +29,7 @@ export default function Home() {
         <Menu>
           <Box>
             <Arrow src={arrowLeft} />
-            <Link href="#"><a>About</a></Link>
+            <Link href="/about"><a>About</a></Link>
           </Box>
           <Box>
             <Link href="#"><a>Blog</a></Link>
