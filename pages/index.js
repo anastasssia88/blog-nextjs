@@ -8,6 +8,7 @@ import Heading1 from '../Components/Heading1'
 import Heading2 from '../Components/Heading2'
 import Text from '../Components/Text'
 import SocialBtns from '../Components/SocialBtns'
+import Avatar from '../Components/Avatar'
 
 import linguanastya from '../public/images/anastasia.png'
 import circle from '../public/images/circle.png'
@@ -38,9 +39,7 @@ export default function Home() {
         
           <Heading1 content="Do you want to speak 
           French with ease and confidence?"/>
-          <Div>
-            <Img src={linguanastya} />
-          </Div>
+          <Avatar src={linguanastya} />
           <Text content="Hi, my name is Anastasia. I’m a web developer with linguistics background based in Los Angeles, California. I’m here to help you break speaking barrier, enhance your listening skills, and become confident while speaking French." />
           <SocialBtns primary></SocialBtns>
           
@@ -89,7 +88,7 @@ const Img = styled.img`
 `
 
 const Menu = styled.nav`
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
