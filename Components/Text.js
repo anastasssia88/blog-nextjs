@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-const Text = ({content}) => {
+const Text = (props) => {
     return (
-        <P>
-            {content}
+        <P light={props.light} sm={props.sm}>
+            {props.content}
         </P>
     );
 }
@@ -11,8 +11,8 @@ const Text = ({content}) => {
 export default Text;
 
 const P = styled.p`
-    color: ${ props => props.light ? '#314654' : '#EDEBE8'};
-    font-size: ${ props => props.sm ? '16px' : '22px'};
+    color: ${ props => props.light ? '#E5E5E5' : '#314654'};
+    font-size: ${ props => props.sm ? '20px' : '22px'};
     font-weight: 300;
     padding: 0.5rem 0rem;
 

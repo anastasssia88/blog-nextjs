@@ -38,10 +38,10 @@ export default function Home() {
         </Menu>
       
         
-          <Heading1 content="Do you want to speak 
+          <Heading1 light content="Do you want to speak 
           French with ease and confidence?"/>
           <Avatar src={linguanastya} />
-          <Text content="Hi, my name is Anastasia. I’m a web developer with linguistics background based in Los Angeles, California. I’m here to help you break speaking barrier, enhance your listening skills, and become confident while speaking French." />
+          <Text light content="Hi, my name is Anastasia. I’m a web developer with linguistics background based in Los Angeles, California. I’m here to help you break speaking barrier, enhance your listening skills, and become confident while speaking French." />
           <SocialBtns primary></SocialBtns>
           
           
@@ -53,7 +53,7 @@ const Section = styled.section`
   height: 100vh;
   width: 100%;
   background: #314654;
-  padding: 2rem 18rem;
+  padding: 2rem 20rem;
 
   display: flex;
   flex-direction: column;

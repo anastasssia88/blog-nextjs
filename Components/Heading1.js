@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Heading1 = (props) => {
     return (
-        <H1>
+        <H1 light={props.light}>
             {props.content}
         </H1>
     );
@@ -11,7 +11,7 @@ const Heading1 = (props) => {
 export default Heading1;
 
 const H1 = styled.h1`
-    color: ${props => props.light ? '#314654' : '#EDEBE8'};
+    color: ${props => props.light ? '#E5E5E5' : '#314654'};
     text-align: center;
 
     @media (max-width: 768px) {
