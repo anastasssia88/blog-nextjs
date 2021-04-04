@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Section = (props) => {
     return (
-        <StyledSection light={props.light} dark={props.dark} auto={props.auto} redGradient={props.redGradient}>
+        <StyledSection light={props.light} dark={props.dark} auto={props.auto} redGradient={props.redGradient} mdP={props.mdP}>
             {props.children}
         </StyledSection>
     );
@@ -18,7 +18,10 @@ const StyledSection = styled.section`
   /* background: ${props => props.redGradient && 'linear-gradient(to bottom, #BE4357, #EDEBE8)'}; */
   background: ${props => props.redGradient && '#BE4357'};
 
+  /* padding: 2rem 20rem; */
   padding: 2rem 20rem;
+  padding: ${props => props.mdP && '3rem 20rem 8rem 20rem'};
+  padding: ${props => props.smP && '3rem 20rem'};
 
   display: flex;
   flex-direction: column;

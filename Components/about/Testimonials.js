@@ -5,15 +5,19 @@ import Card from './Card'
 
 const Testimonials = () => {
     return (
-        <Section redGradient>
+        <Section redGradient auto mdP>
             <Card content="Hello everyone! It's Anastasia speaking to you. I’m a web developer with a bachelor's degree in linguistics. I’m very confident in speaking Russian, English, French. my goal is to help you make French your ’second nature" name="- Natalie" />
+            <Box>
+                <Card content="Hello everyone! It's Anastasia speaking to you. I’m a web developer with a bachelor's degree in linguistics. I’m very confident in speaking Russian, English, French. my goal is to help you make French your ’second nature" name="- Natalie" />
+                <Card content="Hello everyone! It's Anastasia speaking to you. I’m a web developer with a bachelor's degree in linguistics. I’m very confident in speaking Russian, English, French. my goal is to help you make French your ’second nature" name="- Natalie" />
+            </Box>
         </Section>
     );
 }
 
 export default Testimonials;
 
-// const Section = styled.section`
-//     background: linear-gradient(to bottom, #BE4357, #6A2F38);
-//     height: 100vh;
-// `
+const Box = styled.div`
+    display: flex;
+    flex-direction: row;
+`

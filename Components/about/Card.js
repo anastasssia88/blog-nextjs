@@ -22,11 +22,18 @@ const Div = styled.div`
     background: #EDEBE8;
     border-radius: 50px;
     padding: 2rem 3rem;
+    margin: 1rem;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 5%);
     justify-content: sapce-between;
     align-items: center;
 
     display: flex;
     flex-direction: row;
+    transition: all 0.4s ease;
+
+    &:hover{
+        box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 10%);
+    }
     
     svg {
         fill: #314654;
@@ -38,5 +45,5 @@ const Div = styled.div`
 const Content = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
+    margin-left: 1rem;
 `

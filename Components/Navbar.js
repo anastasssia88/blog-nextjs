@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 const Header = (props) => {
     return (
-        <Menu smP={props.smP} >
-            <Link href="/about"><A>About</A></Link>
-            <Link href="/"><A>Home</A></Link>
-            <Link href="#"><A>Blog</A></Link>
+        <Menu smP={props.smP} light={props.light} >
+            <Link href="/about"><A light={props.light}>About</A></Link>
+            <Link href="/"><A light={props.light}>Home</A></Link>
+            <Link href="#"><A light={props.light}>Blog</A></Link>
         </Menu>
     );
 }
@@ -25,7 +25,7 @@ const Menu = styled.nav`
 const A = styled.a`
     margin: 0 0.5rem;
     font-weight: 300;
-    color: #314654;
+    color: ${props => props.light ? '#EDEBE8' : '#314654'};
     cursor: pointer;
     transition: all 0.4s ease;
 

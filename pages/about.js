@@ -9,6 +9,7 @@ import SocialBtns from '../Components/SocialBtns'
 import aboutCurve from '../public/images/about-curve.svg'
 import Testimonials from '../Components/about/Testimonials'
 import Section from '../Components/Section'
+import Footer from '../Components/Footer'
 
 
 const about = () => {
@@ -29,10 +30,7 @@ const about = () => {
                 </svg>
             </Curve>
             <Testimonials />
-            <Section light auto>
-                <Navbar smP/>
-                <SocialBtns />
-            </Section>
+            <Footer />
             
         </>
     );
