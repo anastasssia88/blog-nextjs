@@ -9,6 +9,7 @@ import Heading2 from '../Components/Heading2'
 import Text from '../Components/Text'
 import SocialBtns from '../Components/SocialBtns'
 import Avatar from '../Components/Avatar'
+import Section from '../Components/Section'
 
 
 import linguanastya from '../public/images/anastasia.png'
@@ -20,7 +21,7 @@ import arrowRight from '../public/images/arrow-right.svg'
 
 export default function Home() {
   return (
-    <Section>
+    <Section dark>
       <Head>
           <title>FrenchSound</title>
           <link rel="icon" href="/favicon.ico" />
@@ -49,27 +50,7 @@ export default function Home() {
   )
 }
 
-const Section = styled.section`
-  height: 100vh;
-  width: 100%;
-  background: #314654;
-  padding: 2rem 20rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 1024px) {
-    height: 100vh;
-    padding: 1rem 10rem;
-  }
-
-  @media (max-width: 768px) {
-    height: auto;
-    padding: 2rem 2rem;
-  }
-`
 
 const Div = styled.div`
   margin: 2rem;

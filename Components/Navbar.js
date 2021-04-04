@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
-const Header = () => {
+const Header = (props) => {
     return (
-        <Menu>
+        <Menu smP={props.smP} >
             <Link href="/about"><A>About</A></Link>
             <Link href="/"><A>Home</A></Link>
             <Link href="#"><A>Blog</A></Link>
@@ -14,7 +14,7 @@ const Header = () => {
 export default Header;
 
 const Menu = styled.nav`
-  padding: 2rem 0rem 5rem 0;
+  padding: ${props => props.smP ? '0rem 0rem 0rem 0' : '2rem 0rem 5rem 0'};
   width: 100%;
   display: flex;
   flex-direction: row;
