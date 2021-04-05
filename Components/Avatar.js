@@ -28,4 +28,9 @@ const Div = styled.div`
 const Img = styled.img`
   width: 200px;
   height: 200px;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1, 1.1)
+  }
 `

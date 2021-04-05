@@ -31,5 +31,6 @@ const A = styled.a`
 
     &:hover{
         color: #BE4357;
+        font-weight: 500;
     }
 `

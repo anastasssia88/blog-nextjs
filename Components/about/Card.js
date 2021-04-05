@@ -23,7 +23,7 @@ const Div = styled.div`
     border-radius: 50px;
     padding: 2rem 3rem;
     margin: 1rem;
-    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 5%);
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 7%);
     justify-content: sapce-between;
     align-items: center;
 
@@ -32,7 +32,7 @@ const Div = styled.div`
     transition: all 0.4s ease;
 
     &:hover{
-        box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 10%);
+        box-shadow: 0px 0px 14px 8px rgba(0, 0, 0, 15%);
     }
     
     svg {
