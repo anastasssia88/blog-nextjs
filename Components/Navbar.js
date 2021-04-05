@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
+
 const Header = (props) => {
     return (
         <Menu smP={props.smP} light={props.light} >
