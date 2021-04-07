@@ -7,7 +7,7 @@ const Header = (props) => {
         <Menu smP={props.smP} light={props.light} >
             <Link href="/about"><A light={props.light}>About</A></Link>
             <Link href="/"><A light={props.light}>Home</A></Link>
-            <Link href="#"><A light={props.light}>Blog</A></Link>
+            <Link href="/blog"><A light={props.light}>Blog</A></Link>
         </Menu>
     );
 }
