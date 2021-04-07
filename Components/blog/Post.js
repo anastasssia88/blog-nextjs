@@ -12,7 +12,7 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 
 
-const Card = () => {
+const Post = () => {
     return (
         <Div>
             <img src={Cover} alt=""/>
@@ -25,7 +25,7 @@ const Card = () => {
     );
 }
 
-export default Card;
+export default Post;
 
 const Div = styled.div`
     width: 100%;

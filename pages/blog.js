@@ -9,7 +9,7 @@ import Avatar from '../Components/Avatar'
 import Section from '../Components/Section'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import Card from '../Components/blog/Card'
+import Post from '../Components/blog/Post'
 
 
 
@@ -23,9 +23,9 @@ const blog = () => {
                     <SocialBtns />
             </Section>
             <Section light auto>
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Post />
+                    <Post />
+                    <Post />
             </Section>
             <Footer />
         </>
