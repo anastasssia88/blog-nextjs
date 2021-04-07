@@ -18,7 +18,7 @@ const Post = () => {
             <img src={Cover} alt=""/>
             <Content>
                 <h3>How to speak with confidence and ease</h3>
-                <Text xs content="Postend on March 20, 2021 " />
+                <Text xs content="Posted on March 20, 2021 " />
                 <Text sm content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..." />
             </Content>
         </Div>
@@ -33,7 +33,7 @@ const Div = styled.div`
     padding: 2rem 0rem;
     margin: 1rem;
     border-bottom: 2px solid #E5E4E1;
-    
+    cursor: pointer;
 
     display: flex;
     flex-direction: row;
@@ -42,7 +42,8 @@ const Div = styled.div`
     transition: all 0.4s ease;
 
     &:hover{
-
+        transform: scale(1.02, 1.02);
+        
     }
     
     img {

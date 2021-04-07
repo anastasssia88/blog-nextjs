@@ -19,8 +19,8 @@ const blog = () => {
             <Section light auto>
                     <Navbar />
                     <Heading1 content="Tips & Free French Lessons" />
-                    <Text sm mt content="I’m here to help you break speaking barrier, enhance your listening skills, and become confident while speaking French." />
-                    <SocialBtns />
+                    <Text sm mt content="I’m here to help you break speaking barrier and become confident when speaking French. What will help you to speak and understand better? Find answers in my posts. " />
+                    {/* <SocialBtns /> */}
             </Section>
             <Section light auto>
                     <Post />

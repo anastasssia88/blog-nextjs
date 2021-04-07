@@ -33,7 +33,7 @@ export default function Home() {
             <Link href="/about"><a>About</a></Link>
           </Box>
           <Box>
-            <Link href="#"><a>Blog</a></Link>
+            <Link href="/blog"><a>Blog</a></Link>
             <Arrow src={arrowRight} />
           </Box>
         </Menu>

@@ -11,7 +11,7 @@ const Section = (props) => {
 export default Section;
 
 const StyledSection = styled.section`
-    height: ${props => props.auto ? 'auto' : '100vh'};
+  height: ${props => props.auto ? 'auto' : '100vh'};
   width: 100%;
   background: ${props => props.light && '#EDEBE8'};
   background: ${props => props.dark && '#314654'};
@@ -22,6 +22,7 @@ const StyledSection = styled.section`
   padding: 2rem 20rem;
   padding: ${props => props.mdP && '3rem 20rem 8rem 20rem'};
   padding: ${props => props.smP && '3rem 20rem'};
+
 
   display: flex;
   flex-direction: column;
