@@ -1,21 +1,14 @@
 import styled from 'styled-components'
-import Cover from '../public/images/read-in-french.jpg'
+import Link from 'next/link'
 
 // Components
-import Heading1 from './Heading1'
-import Heading2 from './Heading2'
 import Text from './Text'
-import SocialBtns from './SocialBtns'
-import Avatar from './Avatar'
-import Section from './Section'
-import Navbar from './Navbar'
-import Footer from './Footer'
 
 
-function Post({ date, image, title, category, content, excerpt }) {
+
+function PostBox({ date, image, title, category, content, excerpt, link }) {
     let { file, description } = image
 
-    console.log(image)
     return (
         <Div>
             <img alt={description} src={`https:${file.url}`} />
@@ -24,13 +17,14 @@ function Post({ date, image, title, category, content, excerpt }) {
                 <Text xs content={date.substring(0, 10)} />
                 {/* <Text xs content={category} /> */}
                 <Text sm content={excerpt} />
+                <Link href={"/blog/" + link} >Read more</Link>
             </Content>
         </Div>
 
     )
   }
   
-  export default Post
+  export default PostBox
 
   const Div = styled.div`
   width: 100%;
