@@ -22,7 +22,7 @@ function Post({ date, image, title, category, content, excerpt }) {
             <Content>
                 <h3>{title}</h3>
                 <Text xs content={date.substring(0, 10)} />
-                <Text xs content={category} />
+                {/* <Text xs content={category} /> */}
                 <Text sm content={excerpt} />
             </Content>
         </Div>
@@ -36,7 +36,7 @@ function Post({ date, image, title, category, content, excerpt }) {
   width: 100%;
   background: #EDEBE8;
   padding: 2rem 0rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
   border-bottom: 2px solid #E5E4E1;
   cursor: pointer;
 
