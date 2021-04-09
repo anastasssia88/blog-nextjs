@@ -22,7 +22,7 @@ const blog = ({posts}) => {
             <Section light auto>
                     <div className="posts">
                     {posts.map((p) => {
-                        return <PostBox key={p.date} date={p.date} image={p.image} title={p.title} category={p.category} content={p.content} excerpt={p.excerpt} image={p.image.fields} link={p.slug} /> 
+                        return <PostBox key={p.id} date={p.date} image={p.image} title={p.title} category={p.category} content={p.content} excerpt={p.excerpt} image={p.image.fields} link={p.slug} /> 
                     })}
                     </div>
             </Section>

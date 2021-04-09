@@ -10,16 +10,18 @@ function PostBox({ date, image, title, category, content, excerpt, link }) {
     let { file, description } = image
 
     return (
-        <Div>
-            <img alt={description} src={`https:${file.url}`} />
-            <Content>
-                <h3>{title}</h3>
-                <Text xs content={date.substring(0, 10)} />
-                {/* <Text xs content={category} /> */}
-                <Text sm content={excerpt} />
-                <Link href={"/blog/" + link} >Read more</Link>
-            </Content>
-        </Div>
+        <Link href={"/blog/" + link}>
+            <Div>
+                <img alt={description} src={`https:${file.url}`} />
+                <Content>
+                    <h3>{title}</h3>
+                    <Text xs content={date.substring(0, 10)} />
+                    {/* <Text xs content={category} /> */}
+                    <Text sm content={excerpt} />
+                    {/* <Link href={"/blog/" + link}><a>Read more</a></Link> */}
+                </Content>
+            </Div>
+        </Link>
 
     )
   }
