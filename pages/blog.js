@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { fetchEntries } from '../util/contentfulPosts'
 
 // Components
 import Heading1 from '../Components/Heading1'
@@ -9,11 +10,13 @@ import Avatar from '../Components/Avatar'
 import Section from '../Components/Section'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import Post from '../Components/blog/Post'
+// import Post from '../Components/blog/Post'
+import Post from '../Components/Post'
 
 
 
-const blog = () => {
+
+const blog = ({posts}) => {
     return (
         <>
             <Section light auto>
@@ -23,9 +26,14 @@ const blog = () => {
                     {/* <SocialBtns /> */}
             </Section>
             <Section light auto>
+                    {/* <Post />
                     <Post />
-                    <Post />
-                    <Post />
+                    <Post /> */}
+                    <div className="posts">
+                    {posts.map((p) => {
+                        return <Post key={p.date} date={p.date} image={p.image} title={p.title} category={p.category} content={p.content} excerpt={p.excerpt} image={p.image.fields} />
+                    })}
+                    </div>
             </Section>
             <Footer />
         </>
@@ -33,3 +41,16 @@ const blog = () => {
 }
 
 export default blog;
+
+export async function getStaticProps() {
+    const res = await fetchEntries()
+    const posts = await res.map((p) => {
+      return p.fields
+    })
+  
+    return {
+      props: {
+        posts,
+      },
+    }
+  }

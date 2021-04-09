@@ -9,6 +9,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "contentful": "^8.2.1",
     "next": "10.1.2",
     "next-images": "^1.7.0",
     "react": "17.0.2",
