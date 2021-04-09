@@ -1,3 +1,7 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+
+
 const client = require('contentful').createClient({
     space: process.env.SPACE_ID,
     accessToken: process.env.ACCESS_TOKEN,
@@ -33,10 +37,10 @@ export async function getStaticProps({params}) {
 
 
 const SinglePost = ({blogPost}) => {
-    let {id, title, slug, date, image, category, excerpt} = blogPost.fields
+    let {id, title, slug, date, image, category, excerpt, content} = blogPost.fields
     let description = image.fields.title
     let file = image.fields.file
-    
+
     return (
         <div>
             <h1>{title}</h1> 
@@ -50,6 +54,11 @@ const SinglePost = ({blogPost}) => {
 
             <p>Img description: {description}</p>
             <img alt={description} src={`https:${file.url}`} />
+            <div>{ documentToReactComponents(content, {
+                renderNode: {
+                    [BLOCKS.EMBEDDED_ASSET]: node => <img src={node.data.target.fields.file.url} width={100} height={150} />
+                }
+            }) }</div>
             
         </div>
     );
