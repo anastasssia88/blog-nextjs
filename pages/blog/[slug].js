@@ -31,15 +31,18 @@ export async function getStaticProps({params}) {
         props: {
             blogPost: data.items[0],
         },
+        revalidate: 1
     };
 }
 
 
 
-const SinglePost = ({blogPost}) => {
+const SinglePost = ({ blogPost }) => {
     let {id, title, slug, date, image, category, excerpt, content} = blogPost.fields
     let description = image.fields.title
     let file = image.fields.file
+
+    if(!blogPost) return <div>404 error</div>
 
     return (
         <div>
