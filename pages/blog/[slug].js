@@ -7,25 +7,12 @@ const client = require('contentful').createClient({
     accessToken: process.env.ACCESS_TOKEN,
 })
 
-
-export async function getStaticPaths() {
-    let data = await client.getEntries({
-        content_type: "blogPost",
-    });
-
-    return {
-        paths: data.items.map((item) => ({
-            params: {slug: item.fields.slug}
-        })),
-        fallback: true,
-    };
-}
-
 export async function getStaticProps({params}) {
-    let data = await client.getEntries({
+    let data = await client
+    .getEntries({
         content_type: "blogPost",
         "fields.slug": params.slug
-    });
+    })
 
     return {
         props: {
@@ -35,9 +22,23 @@ export async function getStaticProps({params}) {
     };
 }
 
+export async function getStaticPaths() {
+    let data = await client.getEntries({
+        content_type: "blogPost",
+    })
+
+    console.dir(data)
+    return {
+        paths: data.items.map((item) => ({
+            params: {slug: item.fields.slug}
+        })),
+        fallback: false,
+    };
+}
 
 
 const SinglePost = ({ blogPost }) => {
+    console.log(blogPost.fields)
     let {id, title, slug, date, image, category, excerpt, content} = blogPost.fields
     let description = image.fields.title
     let file = image.fields.file
