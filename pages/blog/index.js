@@ -4,7 +4,7 @@ import { fetchEntries } from '../../util/contentfulPosts'
 // Components
 import Heading1 from '../../Components/Heading1'
 import Text from '../../Components/Text'
-import Section from '../../Components/Section'
+import Section from '../../Components/shared/Section'
 import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer'
 import PostBox from '../../Components/PostBox'
@@ -40,7 +40,7 @@ export async function getStaticProps() {
     })
   
     return {
-      props: {
+      props: { 
         posts,
       },
       revalidate: 1

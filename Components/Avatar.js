@@ -14,7 +14,7 @@ export default Avatar;
 
 
 const Div = styled.div`
-  margin: 2rem;
+  margin-bottom: 1.5rem;
   height: 220px;
   width: 220px;
   background: url(${circle}) no-repeat;

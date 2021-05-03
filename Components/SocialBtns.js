@@ -26,20 +26,21 @@ export default SocialBtns;
 const Div = styled.div`
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 
     svg {
         width: 30px;
         height: 30px;
-        margin:  ${ props => props.smM ? '1rem 1rem' : '2rem 1rem'};
-        fill: ${props => props.primary ? '#EDEBE8' : '#314654'}; 
-        border-radius: 10px;
+        margin: 0px 10px;
+        margin:  ${ props => props.smM && '1rem 1rem'};
+        fill: ${props => props.primary ? '#C4C4C4' : '#314654'}; 
+        border-radius: 50px;
         cursor: pointer;
         transition: all 0.4s ease-in-out;
 
         &:hover {
             fill: #BE4357;
-            transform: scale(1.2, 1.2)
+            transform: scale(1.1, 1.1)
         }
     }
 `

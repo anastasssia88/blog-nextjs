@@ -1,5 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import styled from "styled-components";
 
 
 const client = require('contentful').createClient({
@@ -7,7 +8,7 @@ const client = require('contentful').createClient({
     accessToken: process.env.ACCESS_TOKEN,
 })
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({params}) { 
     let data = await client
     .getEntries({
         content_type: "blogPost",
@@ -27,7 +28,6 @@ export async function getStaticPaths() {
         content_type: "blogPost",
     })
 
-    console.dir(data)
     return {
         paths: data.items.map((item) => ({
             params: {slug: item.fields.slug}
@@ -38,7 +38,6 @@ export async function getStaticPaths() {
 
 
 const SinglePost = ({ blogPost }) => {
-    console.log(blogPost.fields)
     let {id, title, slug, date, image, category, excerpt, content} = blogPost.fields
     let description = image.fields.title
     let file = image.fields.file

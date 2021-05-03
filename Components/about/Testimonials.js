@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Section from '../Section'
+import Section from '../shared/Section'
 import Card from './Card'
 import Heading2 from '../Heading2'
 

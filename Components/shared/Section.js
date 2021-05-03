@@ -11,24 +11,24 @@ const Section = (props) => {
 export default Section;
 
 const StyledSection = styled.section`
+  min-height: 100vh;
   height: ${props => props.auto ? 'auto' : '100vh'};
   width: 100%;
+  
   background: ${props => props.light && '#EDEBE8'};
   background: ${props => props.dark && '#314654'};
-  /* background: ${props => props.redGradient && 'linear-gradient(to bottom, #BE4357, #EDEBE8)'}; */
   background: ${props => props.redGradient && '#BE4357'};
 
-  /* padding: 2rem 20rem; */
   padding: 2rem 20rem;
   padding: ${props => props.mdP && '3rem 20rem 8rem 20rem'};
   padding: ${props => props.smP && '3rem 20rem'};
 
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
+  
   @media (max-width: 1024px) {
     height: 100vh;
     padding: 1rem 10rem;
@@ -37,5 +37,9 @@ const StyledSection = styled.section`
   @media (max-width: 768px) {
     height: auto;
     padding: 2rem 2rem;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 1rem 30rem;
   }
 `

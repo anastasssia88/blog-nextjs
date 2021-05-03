@@ -137,10 +137,13 @@ html {
 
 h1, h2, h3 {
   font-family: 'Lora', serif;
+  color: #314654;
+  line-height: 1.2;
 }
 
 div, p, a {
   font-family: 'Karla', sans-serif;
+  color: #314654;
 }
 
 a {

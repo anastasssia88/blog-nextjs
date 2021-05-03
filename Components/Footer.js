@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import Navbar from './Navbar'
-import Section from './Section'
+import Section from './shared/Section'
 import SocialBtns from './SocialBtns'
 
 
