@@ -3,14 +3,14 @@ import Logo from "./Logo"
 import NavItem from "./NavItem"
 
 
-const Navbar = ({ lightLogo }) => {
+const Navbar = ({ light }) => {
     return (
-        <Nav>
-            <Logo light={lightLogo} />
+        <Nav light={light}>
+            <Logo light={light} />
             <div>
-                <NavItem content="About" href="/about" light/>
-                <NavItem content="Home" href="/" light />
-                <NavItem content="Blog" href="/blog" light />
+                <NavItem content="About" href="/about" light={light} />
+                <NavItem content="Home" href="/" light={light} />
+                <NavItem content="Blog" href="/blog" light={light} />
             </div>
         </Nav>
     );

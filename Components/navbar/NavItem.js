@@ -20,8 +20,12 @@ const Div = styled.div`
     margin-left: 4rem;
     cursor: pointer;
     letter-spacing: 1.1px;
-    color: ${ props => props.light && "#EDEBE8"};
-
     padding-bottom: 10px;
+    transition: all 0.3s ease;
+    color: ${ props => props.light && "#EDEBE8"};
     border-bottom: ${ props => props.active && "1px solid #C4C4C4"};
+
+    &:hover{
+        color: #BE4357;
+    }
 `

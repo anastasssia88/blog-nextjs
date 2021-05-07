@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-const Section = (props) => {
+const Section = ({ light, dark, auto, redGradient, mdP, children}) => {
     return (
-        <StyledSection light={props.light} dark={props.dark} auto={props.auto} redGradient={props.redGradient} mdP={props.mdP}>
-            {props.children}
+        <StyledSection light={light} dark={dark} auto={auto} redGradient={redGradient} mdP={mdP}>
+            {children}
         </StyledSection>
     );
 }
@@ -11,8 +11,7 @@ const Section = (props) => {
 export default Section;
 
 const StyledSection = styled.section`
-  min-height: 100vh;
-  height: ${props => props.auto ? 'auto' : '100vh'};
+  min-height: ${props => props.auto ? 'auto' : '100vh'};
   width: 100%;
   
   background: ${props => props.light && '#EDEBE8'};

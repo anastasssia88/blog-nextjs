@@ -5,8 +5,8 @@ import { fetchEntries } from '../../util/contentfulPosts'
 import Heading1 from '../../Components/Heading1'
 import Text from '../../Components/Text'
 import Section from '../../Components/shared/Section'
-import Navbar from '../../Components/Navbar'
-import Footer from '../../Components/Footer'
+import Navbar from '../../Components/navbar/Navbar'
+import Footer from '../../Components/shared/Footer'
 import PostBox from '../../Components/PostBox'
 
 

@@ -1,20 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
-import Link from 'next/link'
 
-// Components
-import Heading1 from '../Components/Heading1'
-import Heading2 from '../Components/Heading2'
-import Text from '../Components/Text'
 import SocialBtns from '../Components/SocialBtns'
 import Avatar from '../Components/Avatar'
-// import Section from '../Components/shared/Section'
-
 import linguanastya from '../public/images/anastasia.png'
-import circle from '../public/images/circle.png'
-import arrowLeft from '../public/images/arrow-left.svg'
-import arrowRight from '../public/images/arrow-right.svg'
 
 // New
 import Navbar from "../Components/navbar/Navbar"
@@ -44,7 +33,7 @@ export default function Home() {
       
       <Section dark>
         <Main>
-          <Navbar lightLogo />
+          <Navbar light />
             <Flex>
               <div>
                 <h1>Do you want to speak French with ease and confidence?</h1>
