@@ -7,12 +7,10 @@ export const BlogProvider = ({ children }) => {
 
   return (
     <BlogContext.Provider
-      value={[isActive, setIsActive]}>
+      value={{
+        isActiveKey: [isActive, setIsActive]
+        }}>
       {children}
     </BlogContext.Provider> 
   );
 };
-
-export const useAppContext = () => {
-  return useContext(AppContext);
-}

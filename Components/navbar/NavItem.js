@@ -1,10 +1,23 @@
 import styled from "styled-components"
 import Link from 'next/link'
+import { useState, useEffect } from "react";
 
-const NavItem = ({ href, content, light, active }) => {
+
+const NavItem = ({ content, path, href, light, active }) => {
+    const [ isActive, setIsActive ] = useState(false)
+
+    useEffect(() => {
+        if (href === path) {
+          setIsActive(true);
+        } else {
+          setIsActive(false);
+        }
+      }, [href, path]);
+
+
     return (
-        <Link href={href} >
-            <Div light={light} active={active}>
+        <Link href={href} isActive={isActive}>
+            <Div light={light} isActive={isActive}>
                 { content }
             </Div>
         </Link>
@@ -21,9 +34,12 @@ const Div = styled.div`
     cursor: pointer;
     letter-spacing: 1.1px;
     padding-bottom: 10px;
-    transition: all 0.3s ease;
+
     color: ${ props => props.light && "#EDEBE8"};
-    border-bottom: ${ props => props.active && "1px solid #C4C4C4"};
+    color:  ${ props => props.isActive && "#BE4357"};
+    border-bottom: ${ props => props.isActive && "1px solid #BE4357"};
+
+    transition: all 0.3s ease;
 
     &:hover{
         color: #BE4357;

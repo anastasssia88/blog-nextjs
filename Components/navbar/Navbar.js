@@ -1,16 +1,27 @@
 import styled from "styled-components"
+import { useRouter } from 'next/router'
+import { useState, useEffect } from "react";
+
 import Logo from "./Logo"
 import NavItem from "./NavItem"
 
 
 const Navbar = ({ light }) => { 
+    const router = useRouter()
+    const [path, setPath] = useState(router.route);
+
+    useEffect(() => {
+        setPath(router.route);
+        console.log(path)
+      }, [router.route]);
+
     return (
         <Nav light={light}>
             <Logo light={light} />
             <div>
-                <NavItem content="About" href="/about" light={light} />
-                <NavItem content="Home" href="/" light={light} />
-                <NavItem content="Blog" href="/blog" light={light} />
+                <NavItem content="About" path={path} href="/about" light={light} />
+                <NavItem content="Home" path={path} href="/" light={light} />
+                <NavItem content="Blog" path={path} href="/blog" light={light} />
             </div>
         </Nav>
     );
