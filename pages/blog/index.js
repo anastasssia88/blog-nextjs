@@ -4,7 +4,7 @@ import { fetchEntries } from '../../util/contentfulPosts'
 // Components
 import Navbar from '../../Components/navbar/Navbar'
 import Footer from '../../Components/shared/Footer'
-import PostBox from '../../Components/PostBox'
+import PostBox from '../../Components/blog/PostBox'
 import { Section, Main } from "../../Components/shared/Wrappers"
 
 

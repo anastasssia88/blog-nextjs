@@ -2,12 +2,18 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 // Components
-import Text from './about/Text'
-
+import Text from '../about/Text'
 
 
 function PostBox({ date, image, title, category, content, excerpt, link }) {
     let { file, description } = image
+
+    let formattedDate = new Date(date);
+    formattedDate = formattedDate.toString()
+    let m = formattedDate.substring(4, 7)
+    let d = formattedDate.substring(8, 10)
+    let y = formattedDate.substring(11, 15)
+
 
     return (
         <Link href={"/blog/" + link}>
@@ -15,10 +21,8 @@ function PostBox({ date, image, title, category, content, excerpt, link }) {
                 <img alt={description} src={`https:${file.url}`} />
                 <Content>
                     <h3>{title}</h3>
-                    <Text xs content={date.substring(0, 10)} />
-                    {/* <Text xs content={category} /> */}
-                    <Text sm content={excerpt} />
-                    {/* <Link href={"/blog/" + link}><a>Read more</a></Link> */}
+                    <p><span>{m} {d}, {y}</span></p>
+                    <p>{excerpt}</p>
                 </Content>
             </Div>
         </Link>
@@ -48,9 +52,11 @@ function PostBox({ date, image, title, category, content, excerpt, link }) {
   }
   
   img {
+      border-radius: 20px;
       object-fit: cover;
-      width: 40%;
-      height: 250px;
+      /* width: 40%; */
+      width: 17rem;
+      height: 13rem;
       box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 2%);
   }
 `
@@ -67,5 +73,17 @@ const Content = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 1rem;
+
+  span {
+    font-size: 16px;
+    color: rgba(57, 84, 102, 0.5);
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
 `
   
