@@ -20,5 +20,4 @@ const P = styled.p`
     font-weight: 300;
     padding: 0.5rem 0rem;
     margin-top: ${props => props.mt && '2rem'};
-
 `

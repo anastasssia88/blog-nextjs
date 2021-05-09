@@ -3,7 +3,7 @@ import Logo from "./Logo"
 import NavItem from "./NavItem"
 
 
-const Navbar = ({ light }) => {
+const Navbar = ({ light }) => { 
     return (
         <Nav light={light}>
             <Logo light={light} />

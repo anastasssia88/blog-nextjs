@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import quote from '../../public/images/quote.svg'
-import Text from '../Text'
+import Text from './Text'
 
 const Card = ({content, name, quotes}) => {
 

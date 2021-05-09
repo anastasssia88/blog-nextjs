@@ -9,6 +9,7 @@ import linguanastya from '../public/images/anastasia.png'
 import Navbar from "../Components/navbar/Navbar"
 import Btn from "../Components/shared/Btn"
 import BlueCurve from "../public/images/curve-blue.svg"
+import { Section, Main } from "../Components/shared/Wrappers"
 
 
 
@@ -31,7 +32,7 @@ export default function Home() {
           </Box>
         </Menu> */}
       
-      <Section dark>
+      <Section dark> 
         <Main>
           <Navbar light />
             <Flex>
@@ -55,36 +56,36 @@ export default function Home() {
 }
 
 
-const Section = styled.section`
-  height: 100vh;
-  background: #314654;
+// const Section = styled.section`
+//   height: 100vh;
+//   background: #314654;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// `
 
-const Main = styled.div`
-  padding: 2rem 20rem 0rem 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+// const Main = styled.div`
+//   padding: 2rem 20rem 0rem 20rem; 
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
 
-  @media (max-width: 1024px) {
-    height: 100vh;
-    padding: 1rem 10rem;
-  }
+//   @media (max-width: 1024px) {
+//     height: 100vh;
+//     padding: 1rem 10rem;
+//   }
 
-  @media (max-width: 768px) {
-    height: auto;
-    padding: 2rem 2rem;
-  }
+//   @media (max-width: 768px) {
+//     height: auto;
+//     padding: 2rem 2rem;
+//   }
 
-  @media (min-width: 1920px) {
-    padding: 1rem 30rem;
-  }
-`
+//   @media (min-width: 1920px) {
+//     padding: 1rem 30rem;
+//   }
+// `
 
 const StyledDiv = styled.div`
   /* min-height: 400px; */

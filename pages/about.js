@@ -6,14 +6,16 @@ import SocialBtns from '../Components/SocialBtns'
 import Testimonials from '../Components/about/Testimonials'
 import Footer from '../Components/shared/Footer'
 import Navbar from "../Components/navbar/Navbar"
-import RedCurve from "../public/images/curve-red.svg"
+
+import { Section, Main } from "../Components/shared/Wrappers"
 
  
-
+ 
+  
 const about = () => {
     return (
         <>
-            <Section dark>
+            <Section light bgRedCurve>
                 <Main>
                 <Navbar />
                     <Flex>
@@ -51,37 +53,37 @@ export default about;
 //     }
 // `
 
-const Section = styled.section`
-  background-color: #EDEBE8;
-  background-image:  url(${RedCurve});
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`
+// const Section = styled.section`
+//   background-color: #EDEBE8;
+  // background-image:  url(${RedCurve});
+  // background-repeat: no-repeat;
+  // background-position: bottom center;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// `
 
-const Main = styled.div`
-  padding: 2rem 20rem 20rem 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+// const Main = styled.div`
+//   padding: 2rem 20rem 20rem 20rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
 
-  @media (max-width: 1024px) {
-    height: 100vh;
-    padding: 1rem 10rem;
-  }
+//   @media (max-width: 1024px) {
+//     height: 100vh;
+//     padding: 1rem 10rem;
+//   }
 
-  @media (max-width: 768px) {
-    height: auto;
-    padding: 2rem 2rem;
-  }
+//   @media (max-width: 768px) {
+//     height: auto;
+//     padding: 2rem 2rem;
+//   }
 
-  @media (min-width: 1920px) {
-    padding: 1rem 30rem;
-  }
-`
+//   @media (min-width: 1920px) {
+//     padding: 1rem 30rem;
+//   }
+// `
 
 
 const Flex = styled.div`

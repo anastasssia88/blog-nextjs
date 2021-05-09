@@ -8,7 +8,7 @@ const NavItem = ({ href, content, light, active }) => {
                 { content }
             </Div>
         </Link>
-    );
+    ); 
 }
 
 export default NavItem;

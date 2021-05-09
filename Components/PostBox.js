@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 // Components
-import Text from './Text'
+import Text from './about/Text'
 
 
 
