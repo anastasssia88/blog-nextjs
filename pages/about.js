@@ -25,7 +25,7 @@ const about = () => {
                         </div>
                         <AvatarDiv>
                             <Avatar src={linguanastya} />
-                            <SocialBtns primary />
+                            <SocialBtns primary blueHover/>
                         </AvatarDiv>
                     </Flex>
                 </Main>

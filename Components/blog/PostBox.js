@@ -12,7 +12,7 @@ function PostBox({ date, image, title, category, content, excerpt, link }) {
     formattedDate = formattedDate.toString()
     let m = formattedDate.substring(4, 7)
     let d = formattedDate.substring(8, 10)
-    let y = formattedDate.substring(11, 15)
+    let y = formattedDate.substring(11, 15) 
 
 
     return (

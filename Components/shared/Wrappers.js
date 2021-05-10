@@ -22,6 +22,7 @@ export const Main = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  align-items: ${ props => props.alignLeft && "flex-start"};
 
   @media (max-width: 1024px) {
     height: 100vh;
