@@ -46,6 +46,11 @@ function PostBox({ date, image, title, category, content, excerpt, link }) {
   align-items: center;
   transition: all 0.4s ease;
 
+  @media (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &:hover{
       transform: scale(1.02, 1.02);
       
@@ -54,17 +59,11 @@ function PostBox({ date, image, title, category, content, excerpt, link }) {
   img {
       border-radius: 20px;
       object-fit: cover;
-      /* width: 40%; */
       width: 17rem;
       height: 13rem;
       box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 2%);
   }
 `
-
-// !How i will set img to post
-// object-fit: cover;
-// width: 100%;
-// height: 15rem;
 
 const Content = styled.div`
   flex-basis: 70%;
@@ -83,6 +82,13 @@ const Content = styled.div`
   p {
     font-size: 16px;
     margin-top: 10px;
+  }
+
+  @media (max-width: 767px) {
+    h3 {
+      text-align: center;
+      padding-top: 20px;
+    }
   }
 
 `

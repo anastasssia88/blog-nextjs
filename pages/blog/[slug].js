@@ -96,7 +96,7 @@ const Intro = styled(Main)`
 
     h1, h2, h3 {
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     span {
@@ -131,6 +131,15 @@ const Content = styled.div`
 
     ul {
         list-style-type: disc;
+        padding: 30px;
+
+        li {
+            margin-bottom: 0px;
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
         padding: 30px;
 
         li {
