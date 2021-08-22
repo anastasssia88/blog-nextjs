@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-          <title>FrenchSound</title>
+          <title>41pixel</title>
           <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -35,18 +35,21 @@ export default function Home() {
       <Section dark> 
         <Main>
           <Navbar light />
-            <Flex>
+          <Wrapper>
+            <section>
               <div>
-                <h1>Do you want to speak French with ease and confidence?</h1>
-                <p>My name is Anastasia. I’m here to help you break speaking barrier and become fluent in French.</p>
-                <Btn href="/about" content="Learn more" />
+                <p>Computational linguist</p>
+                <h1>Hi, I’m Anastasia</h1>
+                <p>I help build a voice assistant technology. Passionate about web development, Machine Learning, and philosophy.</p>
               </div>
-              <AvatarDiv>
-                <Avatar src={linguanastya} />
-                <SocialBtns primary />
-              </AvatarDiv>
-            </Flex>
-          </Main>
+              <Btn href="/about" content="Learn more" />
+            </section>
+            <AvatarDiv>
+              <Avatar src={linguanastya} />
+              <SocialBtns primary />
+            </AvatarDiv>
+          </Wrapper>
+        </Main>
           
           <StyledDiv />
       </Section>
@@ -55,40 +58,7 @@ export default function Home() {
   )
 }
 
-
-// const Section = styled.section`
-//   height: 100vh;
-//   background: #314654;
-
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-// `
-
-// const Main = styled.div`
-//   padding: 2rem 20rem 0rem 20rem; 
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: center;
-
-//   @media (max-width: 1024px) {
-//     height: 100vh;
-//     padding: 1rem 10rem;
-//   }
-
-//   @media (max-width: 768px) {
-//     height: auto;
-//     padding: 2rem 2rem;
-//   }
-
-//   @media (min-width: 1920px) {
-//     padding: 1rem 30rem;
-//   }
-// `
-
 const StyledDiv = styled.div`
-  /* min-height: 400px; */
   min-height: 200px;
   width: 100%;
   background-color: #EDEBE8;
@@ -97,26 +67,45 @@ const StyledDiv = styled.div`
   background-size: cover;
 `
 
-
-
-const Flex = styled.div`
+const Wrapper = styled.div`
   margin-top: 5rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start; 
+  /* justify-content:  space-between;
+  align-items: space-between;  */
 
-    h1{
-      color: #E5E5E5;
+  > section {
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-between;
+    align-items: flex-start; 
 
+    > div {
+      p {
+        margin: 1rem 0 2rem 0;
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+      p:first-child {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 3px;
+        color: rgba(159, 164, 167, 0.49);
+        font-weight: 400;
+        margin: 0;
+      }
+      h1, p {
+        color: #E5E5E5;
+      }
+      h1 {
+        margin-top: 0.5rem;
+        font-size: 52px;
+        line-height: 1.1;
+      }
     }
 
-    p{
-      color: #E5E5E5;
-      font-size: 20px;
-      margin: 2rem 0px;
-      font-weight: 400;
-    }
+  }
 `
 
 const AvatarDiv = styled.div`

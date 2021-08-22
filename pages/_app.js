@@ -1,4 +1,6 @@
+import '../styles/resetandnormalize.css'
 import '../styles/globals.css'
+
 import { BlogProvider } from "../helpers/BlogContext";
 
 

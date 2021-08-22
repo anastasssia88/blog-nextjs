@@ -18,8 +18,6 @@ const Button = styled.button`
     background: #BE4357;
     color: #EDEBE8;
     font-weight: 400;
-    font-family: "Karla", sans-serif;
-    font-size: 18px;
     border-radius: 50px;
     border: none;
     min-width: 150px;
@@ -34,8 +32,4 @@ const Button = styled.button`
         background: #395466; 
         transform: scale(1.1, 1.1)
     }
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 `

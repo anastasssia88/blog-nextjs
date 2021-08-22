@@ -16,7 +16,7 @@ export const Section = styled.section`
   background-position: ${ props => props.bgRedCurve && "bottom center"};
 `
 
-export const Main = styled.div`
+export const Main = styled.div` 
   padding: 2rem 20rem 0rem 20rem;
   display: flex;
   flex-direction: column;

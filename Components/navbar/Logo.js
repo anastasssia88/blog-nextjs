@@ -5,7 +5,7 @@ const Logo = ({ light }) => {
     return (
         <Link href="/">
             <Div light={light}>
-                <span>french</span>sound
+                <span>fortyone</span>pixel
             </Div>
         </Link>
     );
@@ -17,7 +17,7 @@ const Div = styled.div`
     font-family: 'Poppins', sans-serif;
     color: #314654;
     color: ${props => props.light && "#C4C4C4"};
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
 

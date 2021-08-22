@@ -28,9 +28,9 @@ export default NavItem;
 
 const Div = styled.div`
     color: #314654;
-    font-size: 18px;
-    font-family: 'Karla', sans-serif;
     margin-left: 4rem;
+    font-size: 16px;
+    font-weight: 400;
     cursor: pointer;
     letter-spacing: 1.1px;
     padding-bottom: 10px;

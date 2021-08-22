@@ -19,8 +19,8 @@ const Navbar = ({ light }) => {
         <Nav light={light}>
             <Logo light={light} />
             <div>
-                <NavItem content="About" path={path} href="/about" light={light} />
                 <NavItem content="Home" path={path} href="/" light={light} />
+                <NavItem content="About" path={path} href="/about" light={light} />
                 <NavItem content="Blog" path={path} href="/blog" light={light} />
             </div>
         </Nav>
@@ -37,7 +37,7 @@ const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
 
-    div { 
+    > div { 
         display: flex;
         flex-direction: row;
     }
