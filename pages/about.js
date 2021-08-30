@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import Avatar from '../Components/Avatar'
+import Avatar from '../Components/shared/Avatar'
 import linguanastya from '../public/images/anastasia.png'
-import SocialBtns from '../Components/SocialBtns'
+import SocialBtns from '../Components/shared/SocialBtns'
 import Testimonials from '../Components/about/Testimonials'
 import Footer from '../Components/shared/Footer'
 import Navbar from "../Components/navbar/Navbar"

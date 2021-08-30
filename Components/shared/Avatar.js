@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import circle from '../public/images/circle.png'
+import circle from '../../public/images/circle.png'
 
 
 const Avatar = (props) => {

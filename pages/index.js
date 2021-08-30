@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import SocialBtns from '../Components/SocialBtns'
-import Avatar from '../Components/Avatar'
+import SocialBtns from '../Components/shared/SocialBtns'
+import Avatar from '../Components/shared/Avatar'
 import linguanastya from '../public/images/anastasia.png'
 
 // New

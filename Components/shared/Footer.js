@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import SocialBtns from '../SocialBtns'
+import SocialBtns from './SocialBtns'
 
 const Footer = () => {
     return (
