@@ -6,7 +6,7 @@ import Avatar from '../Components/shared/Avatar'
 import linguanastya from '../public/images/anastasia.png'
 
 // New
-import Navbar from "../Components/navbar/Navbar"
+import Navbar from "../Components/Navbar"
 import Btn from "../Components/shared/Btn"
 import BlueCurve from "../public/images/curve-blue.svg"
 import { Section, Main } from "../Components/shared/Wrappers"

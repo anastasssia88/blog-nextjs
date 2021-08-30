@@ -33,16 +33,14 @@ h2 {
 
 h3 {
   color: #BE4357;
-  font-size: 24px;
+  font-size: 19px;
+  font-weight: 600;
 }
 
 div, p, a {
   color: #314654;
   line-height: 1.4;
   font-size: 18px;
-}
-
-p {
   font-weight: 400;
   font-size: 16px;
 }

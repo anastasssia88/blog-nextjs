@@ -2,8 +2,8 @@ import styled from "styled-components"
 import { useRouter } from 'next/router'
 import { useState, useEffect } from "react";
 
-import Logo from "./Logo"
-import NavItem from "./NavItem"
+import Logo from "./navbar/Logo"
+import NavItem from "./navbar/NavItem"
 
 
 const Navbar = ({ light }) => { 
