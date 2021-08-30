@@ -28,7 +28,7 @@ h1 {
 h2 {
   color: #314654;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h3 {
@@ -40,4 +40,9 @@ div, p, a {
   color: #314654;
   line-height: 1.4;
   font-size: 18px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
 }

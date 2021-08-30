@@ -15,23 +15,19 @@ import { Section, Main } from "../Components/shared/Wrappers"
 const about = () => {
     return (
         <>
-            <Section light bgRedCurve>
+            {/* <Section light bgRedCurve> */}
+            <Section light >
                 <Main>
                 <Navbar />
-                    <Flex>
-                        <div>
-                            <h1>Hi, I’m Anastasia</h1>
-                            <p>And my goal is to help you become confident when speaking the French language. I’m a web developer who’s fluent in Russian, English, and French. Also, I know some Spanish. In this blog, I share tips and tricks about French and effective learning.</p>
-                        </div>
-                        <AvatarDiv>
-                            <Avatar src={linguanastya} />
-                            <SocialBtns primary bluehover/>
-                        </AvatarDiv>
-                    </Flex>
+                <Hero>
+                    <h2>Summary</h2>
+                    <p>I’m a computational linguist with a bachelor's degree in linguistics and a self-taught web developer with 3 years of experience. I’m passionate about human languages and computers. I'm native in Russian and fluent in English ans French. Fortunately, my job allows me to combine both! At work, I help build the voice of a Russian-speaking voice assistant by applying my knowledge of linguistics, machine learning, and python. </p>
+                </Hero>
+                <SocialBtns primary bluehover alignLeft/>
                 </Main>
             </Section>
 
-            <Testimonials /> 
+            {/* <Testimonials />  */}
             <Footer />
             
         </>
@@ -40,76 +36,14 @@ const about = () => {
 
 export default about;
 
-// const Curve = styled.div`
-//     width: 100%;
-//     height: auto;
-//     margin-top: -5rem;
-//     background:  #EDEBE8;
 
-//     svg {
-//         margin-bottom: -0.3rem;
-//         width: 100%;
-//         fill: #BE4357;
-//     }
-// `
+const Hero = styled.div`
 
-// const Section = styled.section`
-//   background-color: #EDEBE8;
-  // background-image:  url(${RedCurve});
-  // background-repeat: no-repeat;
-  // background-position: bottom center;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-// `
+> h2 {
+  margin-top: 3rem;
+}
 
-// const Main = styled.div`
-//   padding: 2rem 20rem 20rem 20rem;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: center;
-
-//   @media (max-width: 1024px) {
-//     height: 100vh;
-//     padding: 1rem 10rem;
-//   }
-
-//   @media (max-width: 768px) {
-//     height: auto;
-//     padding: 2rem 2rem;
-//   }
-
-//   @media (min-width: 1920px) {
-//     padding: 1rem 30rem;
-//   }
-// `
-
-
-const Flex = styled.div`
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start; 
-
-    h1{
-      color: #314654;
-
-    }
-
-    p{
-      color: #314654;
-      font-size: 20px;
-      margin: 2rem 0px;
-      font-weight: 400;
-    }
-`
-
-const AvatarDiv = styled.div`
-  margin-left: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; 
+> p {
+  margin: 1.5rem 0rem;
+}
 `
