@@ -10,6 +10,25 @@ import ProjectCard from '../Components/about/ProjectCard'
  
   
 const about = () => {
+
+    const [ experience, setExperience ] = useState([
+        {
+            id: 5673647,
+            title: "Computational linguist",
+            date: "Aug 2021 - present",
+            content: "My job is about making Russian-speaking voice assistant's pronunciation more natural for the ear of native speakers.",
+            tags: ["Machine Learning", "Linguistics", "Python", "Git"],
+            image: ""
+        },
+        {
+            id: 4343223,
+            title: "Web Developer",
+            date: "Nov 2018 - present",
+            content: "Achieved 90-100 performance and accessibility for clients' websites built with HTML5, CSS3, JavaScript; Reduced by 20% cost-per-lead by investigating and improving the performance of a construction company website by eliminating render blocking CSS and JavaScript; Increased the loading speed of a website from 4.3s to 0.9s by eliminating render-blocking elements which resulted in generating more than 100 new leads.",
+            tags: ["CSS", "JavaScript", "React.js", "Python", "Django"],
+            image: ""
+        },
+    ]);
     
     return (
         <>
@@ -27,6 +46,7 @@ const about = () => {
                         <h2>Work experience</h2>
                         <WorkCard 
                             type="work"
+                            data={experience}
                             title="Computational linguist"
                             date="Aug 2021 - present"
                             content="My job is about making Russian-speaking voice assistant's pronunciation more natural for the ear of native speakers."
