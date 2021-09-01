@@ -1,32 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
-// import Tag from "./Card/Tag"
 import Voice from '../../public/images/voice.jpeg'
 
 
-const Card = ({ type, data, title, date, content, image}) => {
+const Card = ({ type, data }) => {
+    let { id, title, date, content, tags, image } = data;
+    let newContent = content.split("; ")
 
     return (
-        <>
-        {
-            data.map( item =>
-                <Container key={item.id}>
-                    <Title>
-                        <h3>{item.title}</h3>
-                        <p>{item.date}</p>
-                    </Title>
-                    <p>{item.content}</p>
-                    {/* <img src={Voice} alt="siri voice biulding engineer" width="100%" height="50%" /> */}
-                    <div>
-                        {
-                            item.tags.map( tag => <Tag key={tag}>{tag}</Tag>)
-                        }
-                    </div>
-                </Container>
-            )
-        }
-        
-        </>
+        <Container key={id}>
+            <Title>
+                <h3>{title}</h3>
+                <p>{date}</p>
+            </Title>
+            {
+                newContent.length > 1 ? 
+                    (newContent.map( item => 
+                        <p key={item}>- {item}</p>
+                    ))
+                :
+                    (newContent.map( item => 
+                        <p key={item}>{item}</p>
+                    ))
+            }
+            {/* <img src={Voice} alt="siri voice biulding engineer" width="100%" height="50%" /> */}
+            <div>
+                {
+                    tags.map( tag => <Tag key={tag}>{tag}</Tag>)
+                }
+            </div>
+        </Container>
     )
 }
 
@@ -38,10 +41,11 @@ const Container = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     width: 80%;
+    margin: 4rem 0;
 
-    p {
+    /* > p {
         margin: 1rem 0;
-    }
+    } */
 
     > div {
         display: flex;
@@ -61,6 +65,11 @@ const Title = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+
+    p {
+        margin: 0;
+    }
 `
 
 const Tag = styled.div`
@@ -68,6 +77,7 @@ const Tag = styled.div`
     border-radius: 10px;
     padding: 1px 12px;
     margin-right: 0.8rem;
+    margin-top: 1rem;
 
     min-width: 3rem;
     text-align: center;
