@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { fetchEntries } from '../../util/contentfulPosts'
 
 // Components
-import Navbar from '../../Components/navbar/Navbar'
-import Footer from '../../Components/shared/Footer'
+import Navbar from '../../Components/Navbar'
+import Footer from '../../Components/Footer'
 import PostBox from '../../Components/blog/PostBox'
 import { Section, Main } from "../../Components/shared/Wrappers"
 

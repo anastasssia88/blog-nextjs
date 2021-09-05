@@ -4,13 +4,11 @@ import Footer from '../Components/Footer'
 import { Section, Main } from "../Components/shared/Wrappers"
 import Navbar from "../Components/Navbar"
 import SocialBtns from '../Components/shared/SocialBtns'
-import WorkCard from '../Components/about/Card'
-import ProjectCard from '../Components/about/ProjectCard'
+import Card from '../Components/about/Card'
 
  
   
 const about = () => {
-
     const [ experience, setExperience ] = useState([
         {
             id: 5673647,
@@ -27,6 +25,33 @@ const about = () => {
             content: "Achieved 90-100 performance and accessibility for clients' websites built with HTML5, CSS3, JavaScript; Reduced by 20% cost-per-lead by investigating and improving the performance of a construction company website by eliminating render blocking CSS and JavaScript; Increased the loading speed of a website from 4.3s to 0.9s by eliminating render-blocking elements which resulted in generating more than 100 new leads",
             tags: ["CSS", "JavaScript", "React.js", "Python", "Django"],
             image: ""
+        },
+    ]);
+
+    const [ projects, setProjects ] = useState([
+        {
+            id: 343,
+            title: "Handbook Dev",
+            content: "An open-source project. Built a React app based on The Dogs API.",
+            tags: ["React.js", "Node.js"],
+            link: "",
+            image: "",
+        },
+        {
+            id: 344,
+            title: "PetsPaw App",
+            content: "An individual project. Built a React app based on The Dogs API.",
+            tags: ["React.js", "Dog API"],
+            link: "",
+            image: "",
+        },
+        {
+            id: 345,
+            title: "JobBoard App",
+            content: "An individual project. Built a React app based on The Dogs API.",
+            tags: ["React.js", "Tailwind CSS"],
+            link: "",
+            image: "",
         },
     ]);
     
@@ -46,7 +71,7 @@ const about = () => {
                         <h2>Work experience</h2>
                         {
                             experience.map( item => 
-                                <WorkCard 
+                                <Card 
                                     key = {item.id}
                                     type="work"
                                     data={item}
@@ -55,6 +80,20 @@ const about = () => {
                         }
                         
                     </Experience>
+                    <Projects>
+                        <h2>Some of my web dev projects</h2>
+                        <div>
+                        {
+                            projects.map( item =>
+                                <Card 
+                                    key = {item.id}
+                                    type="project"
+                                    data={item}
+                                /> 
+                            )    
+                        } 
+                        </div>
+                    </Projects>
 
                 </Main>
             </Section>
@@ -91,4 +130,14 @@ const Experience = styled(Container)`
 `
 
 const Projects = styled(Container)`
+    > div {
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 18px;
+    }
 `
