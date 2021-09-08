@@ -5,7 +5,7 @@ import { Section, Main } from "../Components/shared/Wrappers"
 import Navbar from "../Components/Navbar"
 import SocialBtns from '../Components/shared/SocialBtns'
 import Card from '../Components/about/Card'
-
+import Form from '../Components/about/Form'
  
   
 const about = () => {
@@ -97,7 +97,16 @@ const about = () => {
 
                 </Main>
             </Section>
+            
+            <FormContainer>
+                <Main>
+                    <h2>Need to get in touch?</h2>
+                    <Flexbox>
+                        <Form />
+                    </Flexbox>
 
+                </Main>
+            </FormContainer>
             <Footer />
             
         </>
@@ -140,4 +149,19 @@ const Projects = styled(Container)`
         grid-template-rows: 1fr;
         grid-gap: 18px;
     }
+`
+
+const FormContainer = styled.section`
+    background: #57B2D2;
+
+    h2 {
+        width: 100%;
+        color: #EDEBE8;
+    }
+`
+
+const Flexbox = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 `
