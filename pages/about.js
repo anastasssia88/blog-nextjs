@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar"
 import SocialBtns from '../Components/shared/SocialBtns'
 import Card from '../Components/about/Card'
 import Form from '../Components/about/Form'
+import Wave from '../Components/shared/Wave'
  
   
 const about = () => {
@@ -96,15 +97,16 @@ const about = () => {
                     </Projects>
 
                 </Main>
+                <Wave light />
             </Section>
             
             <FormContainer>
+
                 <Main>
                     <h2>Need to get in touch?</h2>
                     <Flexbox>
                         <Form />
                     </Flexbox>
-
                 </Main>
             </FormContainer>
             <Footer />
@@ -153,6 +155,7 @@ const Projects = styled(Container)`
 
 const FormContainer = styled.section`
     background: #57B2D2;
+    padding-bottom: 3rem;
 
     h2 {
         width: 100%;

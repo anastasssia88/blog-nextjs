@@ -1,13 +1,15 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 
+// Components
 import SocialBtns from '../Components/shared/SocialBtns'
 import Avatar from '../Components/shared/Avatar'
-import linguanastya from '../public/images/anastasia.png'
-
-// New
 import Navbar from "../Components/Navbar"
 import Btn from "../Components/shared/Btn"
+import Wave from "../Components/shared/Wave"
+
+// Images
+import linguanastya from '../public/images/anastasia.png'
 import BlueCurve from "../public/images/curve-blue.svg"
 import { Section, Main } from "../Components/shared/Wrappers"
 
@@ -38,7 +40,7 @@ export default function Home() {
           <Wrapper>
             <section>
               <div>
-                <p>Computational linguist</p>
+                <p>Voice Building Engineer</p>
                 <h1>Hi, I’m Anastasia</h1>
                 <p>I help build a voice assistant technology. Passionate about web development, Machine Learning, and philosophy.</p>
               </div>
@@ -50,22 +52,12 @@ export default function Home() {
             </AvatarDiv>
           </Wrapper>
         </Main>
-          
-          <StyledDiv />
+        <Wave dark />
       </Section>
       
     </>
   )
 }
-
-const StyledDiv = styled.div`
-  min-height: 200px;
-  width: 100%;
-  background-color: #EDEBE8;
-  background-image: url(${BlueCurve});
-  background-repeat: no-repeat;
-  background-size: cover;
-`
 
 const Wrapper = styled.div`
   margin-top: 5rem;
