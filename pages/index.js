@@ -10,7 +10,6 @@ import Wave from "../Components/shared/Wave"
 
 // Images
 import linguanastya from '../public/images/anastasia.png'
-import BlueCurve from "../public/images/curve-blue.svg"
 import { Section, Main } from "../Components/shared/Wrappers"
 
 

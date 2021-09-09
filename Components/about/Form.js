@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 
-const Form = () => {
+const Form = ({ title }) => {
     return (
         <FormWrapper action="">
+            <h2>{title}</h2>
             <input type="text" id="name" name="name" aria-label="name" placeholder="Name*"/>
             <input type="text" id="email" name="email" aria-label="email" placeholder="Email*"/>
             <textarea name="message" id="message" cols="30" rows="10" placeholder="What's on your mind?"/>
@@ -23,13 +24,19 @@ const FormWrapper = styled.form`
     align-self: center;
     margin: 1rem 0;
 
+    h2 {
+        width: 100%;
+        color: #EDEBE8;
+        margin-bottom: 1rem;
+    }
+
     input, textarea{
         background: rgba(237, 235, 232, 0.6);
         border: none;
         margin: 8px 0px;
         padding: 10px 20px;
         border-radius: 20px;
-        width: 20rem;
+        width: 22rem;
     }
 
     textarea {

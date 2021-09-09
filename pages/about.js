@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
 import styled from 'styled-components'
+import React, { useState } from 'react'
+
+// Components
 import Footer from '../Components/Footer'
 import { Section, Main } from "../Components/shared/Wrappers"
 import Navbar from "../Components/Navbar"
@@ -7,7 +9,9 @@ import SocialBtns from '../Components/shared/SocialBtns'
 import Card from '../Components/about/Card'
 import Form from '../Components/about/Form'
 import Wave from '../Components/shared/Wave'
- 
+
+// Images
+import globe from '../public/images/globe.svg'
   
 const about = () => {
     const [ experience, setExperience ] = useState([
@@ -16,7 +20,7 @@ const about = () => {
             title: "Computational linguist",
             date: "Aug 2021 - present",
             content: "My job is about making Russian-speaking voice assistant's pronunciation more natural for the ear of native speakers.",
-            tags: ["Machine Learning", "Linguistics", "Python", "Git"],
+            tags: ["Machine Learning", "Python", "Git", "Linguistics"],
             image: ""
         },
         {
@@ -101,11 +105,11 @@ const about = () => {
             </Section>
             
             <FormContainer>
-
                 <Main>
-                    <h2>Need to get in touch?</h2>
+                    {/* <h2>Need to get in touch?</h2> */}
                     <Flexbox>
-                        <Form />
+                        <Form title="Need to get in touch?" />
+                        <img src={globe} alt="Girsl with a laptop" />
                     </Flexbox>
                 </Main>
             </FormContainer>
@@ -142,10 +146,6 @@ const Experience = styled(Container)`
 
 const Projects = styled(Container)`
     > div {
-        /* display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start; */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -167,4 +167,13 @@ const Flexbox = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        /* width: 90%; */
+        margin-left: 2rem;
+        max-width: 30rem;
+        justify-self: flex-end;
+    }
 `
