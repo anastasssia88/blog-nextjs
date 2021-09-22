@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 // Components
-import Text from '../about/Text'
 
 
 function PostBox({ date, image, title, category, content, excerpt, link }) {

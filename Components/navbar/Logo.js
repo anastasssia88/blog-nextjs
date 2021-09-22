@@ -5,7 +5,7 @@ const Logo = ({ light }) => {
     return (
         <Link href="/">
             <Div light={light}>
-                <span>fortyone</span>pixel
+                <span>Anastasia</span>Titova
             </Div>
         </Link>
     );
@@ -24,4 +24,5 @@ const Div = styled.div`
     span {
         color: #BE4357;
     }
+
 `

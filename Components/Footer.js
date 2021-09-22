@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import SocialBtns from './shared/SocialBtns'
 import { Main } from "./shared/Wrappers"
 
+
 const Footer = () => {
     return (
         <StyledFooter dark auto smP>
@@ -9,7 +10,7 @@ const Footer = () => {
             <Main>    
                 <SocialBtns primary bluehover alignLeft />
             </Main>
-        </StyledFooter>
+        </StyledFooter> 
     );
 }
 

@@ -12,11 +12,10 @@ const Navbar = ({ light }) => {
 
     useEffect(() => {
         setPath(router.route);
-        console.log(path)
       }, [router.route]);
 
     return (
-        <Nav light={light}>
+        <Nav light={light} >
             <Logo light={light} />
             <div>
                 <NavItem content="Home" path={path} href="/" light={light} />

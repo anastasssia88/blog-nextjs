@@ -15,10 +15,10 @@ const blog = ({posts}) => {
               <Main>
                 <Navbar />
 
-                <Content>
-                  <h1>Tips & Tricks for French Learners</h1>
+                <Hero>
+                  <h2>Productivity & Web development tips</h2>
                   <p>How to speak French with confidence? How to learn French effectively? How do I start learning French? Those are popular questions I get all the time. Find answers to the most popular questions down below in blog posts. </p>
-                </Content>
+                </Hero>
         
                 <div className="posts">
                 {posts.map((p) => {
@@ -48,17 +48,14 @@ export async function getStaticProps() {
     }
   }
 
-const Content = styled.div`
-  padding: 3rem 0rem;
 
-  h1{
-      color: #314654;
+
+const Hero = styled.section`
+    h2 {
+    margin-top: 3rem;
     }
 
-  p{
-    color: #314654;
-    font-size: 20px;
-    margin: 2rem 0px;
-    font-weight: 400;
-  }
+    p {
+    margin: 1.5rem 0rem;
+}
 `

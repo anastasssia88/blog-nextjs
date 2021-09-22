@@ -37,7 +37,7 @@ const Div = styled.div`
 
     color: ${ props => props.light && "#EDEBE8"};
     color:  ${ props => props.isActive && "#BE4357"};
-    border-bottom: ${ props => props.isActive && "1px solid #BE4357"};
+    /* border-bottom: ${ props => props.isActive && "1px solid #BE4357"}; */
 
     transition: all 0.3s ease;
 
