@@ -4,26 +4,25 @@ import Voice from '../../public/images/voice.jpeg'
 
 
 const Card = ({ type, data }) => {
-    let { id, title, date, content, tags, image } = data;
+    let { id, title, date, content, tags, link, status } = data;
     let newContent = content.split("; ")
 
     return (
         <Container key={id} type={type} >
-            <Title>
+            <Title type={type} status={status}>
                 <h3>{title}</h3>
                 <p>{date}</p>
             </Title>
             {
                 newContent.length > 1 ? 
                     (newContent.map( item => 
-                        <p key={item}>- {item}</p>
+                        <p key={item}>{item}</p>
                     ))
                 :
                     (newContent.map( item => 
                         <p key={item}>{item}</p>
                     ))
             }
-            {/* <img src={Voice} alt="siri voice biulding engineer" width="100%" height="50%" /> */}
             <div>
                 {
                     tags.map( tag => <Tag type={type} key={tag}>{tag}</Tag>)
@@ -31,7 +30,7 @@ const Card = ({ type, data }) => {
             </div>
             {
                 type === "project" && 
-                <a href="/">Live Demo</a>
+                <a href={link} target="_blank">Live Demo</a>
             }
         </Container>
     )
@@ -45,7 +44,7 @@ const Container = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     width: 80%;
-    margin: 4rem 0;
+    padding: 3rem 0rem;
 
     > div {
         display: flex;
@@ -62,6 +61,7 @@ const Container = styled.div`
     box-shadow: ${ props => props.type == "project" && "0px 2px 10px 4px #E3E3E3"};
     border-radius: ${ props => props.type == "project" && "10px"};
     padding: ${ props => props.type == "project" && "20px 15px"};
+    margin: ${ props => props.type == "project" && "3rem 0"};
     width: ${ props => props.type == "project" && "100%"};
 
     a {
@@ -79,9 +79,30 @@ const Title = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    position: relative;
 
     p {
         margin: 0;
+    }
+
+    &::before {
+        content: ' ';
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        left: -4.1rem;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        background-color: #69b6d5;
+        border: 4px solid #69b6d5;
+
+        /* change style for current position */
+        background-color: ${ props => props.status == "current" && "#EDEBE8"};
+
+        /* do not display if card for project */
+        display: ${ props => props.type == "project" && "none"};
     }
 `
 

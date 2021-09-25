@@ -20,16 +20,17 @@ const about = () => {
             title: "Computational linguist",
             date: "Aug 2021 - present",
             content: "My job is about making Russian-speaking voice assistant's pronunciation more natural for the ear of native speakers.",
-            tags: ["Machine Learning", "Python", "Git", "Linguistics"],
-            image: ""
+            tags: ["Linguistics", "Machine Learning", "Python", "JavaScript", "Git" ],
+            status: "current",
+
         },
         {
             id: 4343223,
             title: "Web Developer",
-            date: "Nov 2018 - present",
+            date: "Nov 2018 - Aug 2021",
             content: "Achieved 90-100 performance and accessibility for clients' websites built with HTML5, CSS3, JavaScript; Reduced by 20% cost-per-lead by investigating and improving the performance of a construction company website by eliminating render blocking CSS and JavaScript; Increased the loading speed of a website from 4.3s to 0.9s by eliminating render-blocking elements which resulted in generating more than 100 new leads",
-            tags: ["CSS", "JavaScript", "React.js", "Python", "Django"],
-            image: ""
+            tags: ["HTML", "CSS", "JavaScript", "Python", "React.js",  "Django"],
+            status: "past"
         },
     ]);
 
@@ -37,25 +38,25 @@ const about = () => {
         {
             id: 343,
             title: "Handbook Dev",
-            content: "An open-source project. Built a React app based on The Dogs API.",
+            content: "An open-source project. Web application for developers to share and search for resources.",
             tags: ["React.js", "Node.js"],
-            link: "",
+            link: "https://handbook.dev/",
             image: "",
         },
         {
             id: 344,
             title: "PetsPaw App",
-            content: "An individual project. Built a React app based on The Dogs API.",
+            content: "An individual project. Dog breeds explorer application for everyone who loves dogs.",
             tags: ["React.js", "Dog API"],
-            link: "",
+            link: "https://petspaw-by-anastasia-titova.netlify.app/",
             image: "",
         },
         {
             id: 345,
             title: "JobBoard App",
-            content: "An individual project. Built a React app based on The Dogs API.",
+            content: "An individual project. Job listing application for everyone looking for a new role",
             tags: ["React.js", "Tailwind CSS"],
-            link: "",
+            link: "https://job-listing-app-by-anastasia.netlify.app/",
             image: "",
         },
     ]);
@@ -74,15 +75,17 @@ const about = () => {
 
                     <Experience>
                         <h2>Work experience</h2>
-                        {
-                            experience.map( item => 
-                                <Card 
-                                    key = {item.id}
-                                    type="work"
-                                    data={item}
-                                />    
-                            )
-                        }
+                        <div>
+                            {
+                                experience.map( item => 
+                                    <Card 
+                                        key = {item.id}
+                                        type="work"
+                                        data={item}
+                                    />    
+                                )
+                            }
+                        </div>
                         
                     </Experience>
                     <Projects>
@@ -139,9 +142,21 @@ const Container = styled.section`
 
 const Experience = styled(Container)`
     h2 {
+            margin-top: 3rem;
+            text-align: left;
+        }
+    > div {
+        border-left: 6px solid #5CC0D9;
         margin-top: 3rem;
-        text-align: left;
+        padding: 0rem 3rem;
     }
+`
+
+const Line = styled.div`
+    width: 112px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    position: absolute;
 `
 
 const Projects = styled(Container)`

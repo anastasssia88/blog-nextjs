@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Head>
-          <title>41pixel</title>
+          <title>Anastasia Titova</title>
           <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -39,7 +39,7 @@ export default function Home() {
           <Wrapper>
             <section>
               <div>
-                <p>Voice Building Engineer</p>
+                <p>Computational linguist / developer</p>
                 <h1>Hi, I’m Anastasia</h1>
                 <p>I help build a voice assistant technology. Passionate about web development, Machine Learning, and philosophy.</p>
               </div>

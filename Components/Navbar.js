@@ -20,7 +20,7 @@ const Navbar = ({ light }) => {
             <div>
                 <NavItem content="Home" path={path} href="/" light={light} />
                 <NavItem content="About" path={path} href="/about" light={light} />
-                <NavItem content="Blog" path={path} href="/blog" light={light} />
+                {/* <NavItem content="Blog" path={path} href="/blog" light={light} /> */}
             </div>
         </Nav>
     );
