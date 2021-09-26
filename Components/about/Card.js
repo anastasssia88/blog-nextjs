@@ -64,6 +64,7 @@ const Container = styled.div`
     box-shadow: ${ props => props.type == "project" && "0px 2px 10px 4px #E3E3E3"};
     border-radius: ${ props => props.type == "project" && "10px"};
     padding: ${ props => props.type == "project" && "20px 15px"};
+    margin: ${ props => props.type == "project" && "3rem 0 0 0"};
     width: ${ props => props.type == "project" && "100%"};
     
 
