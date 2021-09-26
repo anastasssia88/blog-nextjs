@@ -68,6 +68,7 @@ const Container = styled.div`
     
 
     @media (max-width: 768px) {
+        width: 100%;
         margin: ${ props => props.type == "project" && "2rem 0 0 0"};
     }
 
@@ -100,6 +101,12 @@ const Title = styled.div`
         }
     }
 
+    h3 {
+        @media (max-width: 768px) {
+            align-self: flex-start;
+        }
+    }
+
     &::before {
         content: ' ';
         display: inline-block;
@@ -118,6 +125,10 @@ const Title = styled.div`
 
         /* do not display if card for project */
         display: ${ props => props.type == "project" && "none"};
+
+        @media (max-width: 768px) {
+            left: -2.7rem;
+        }
     }
 `
 

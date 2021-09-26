@@ -150,9 +150,9 @@ const Experience = styled(Container)`
         margin-top: 3rem;
         padding: 0rem 3rem;
 
-        /* @media (max-width: 768px) {
-            padding: 0rem 3rem;
-        } */
+        @media (max-width: 768px) {
+            padding: 0rem 1.5rem;
+        }
     }
 `
 

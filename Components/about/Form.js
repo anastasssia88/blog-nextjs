@@ -24,10 +24,18 @@ const FormWrapper = styled.form`
     align-self: center;
     margin: 1rem 0;
 
+    @media (max-width: 768px) {
+        justify-self: center;
+        }
+
     h2 {
         width: 100%;
         color: #EDEBE8;
         margin-bottom: 1rem;
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
     }
 
     input, textarea{
@@ -71,4 +79,8 @@ const Button = styled.button`
         background: rgba(237, 235, 232, 0.6);
         /* transform: scale(1.1, 1.1) */
     }
+
+    @media (max-width: 768px) {
+            align-self: center;
+        }
 `
