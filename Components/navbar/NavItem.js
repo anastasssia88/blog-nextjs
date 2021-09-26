@@ -34,12 +34,15 @@ const Div = styled.div`
     cursor: pointer;
     letter-spacing: 1.1px;
     padding-bottom: 10px;
-
     color: ${ props => props.light && "#EDEBE8"};
     color:  ${ props => props.isActive && "#BE4357"};
-    /* border-bottom: ${ props => props.isActive && "1px solid #BE4357"}; */
 
     transition: all 0.3s ease;
+
+    @media (max-width: 768px) {
+        margin-left: 0rem;
+        margin: 0rem 1rem;
+    }
 
     &:hover{
         color: #BE4357;

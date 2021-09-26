@@ -19,4 +19,10 @@ const Wrapper = styled.div`
   min-height: ${ props => props.light ? '300px' : '200px'};
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+
+  @media (max-width: 768px) {
+    min-height: 100px;
+    margin-top: -2rem;
+  }
 `

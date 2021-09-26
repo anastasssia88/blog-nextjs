@@ -69,7 +69,8 @@ const about = () => {
                     <Navbar />
                     <Hero>
                         <h2>Summary</h2>
-                        <p>I’m a computational linguist with a bachelor's degree in linguistics and a self-taught web developer with 3 years of experience. I’m passionate about human languages and computers. I'm native in Russian and fluent in English ans French. Fortunately, my job allows me to combine both! At work, I help build the voice of a Russian-speaking voice assistant by applying my knowledge of linguistics, machine learning, and python</p>
+                        <p>My name is Anastasia, Nastya for short. I help to build a voice assistant technology. My background is in linguistics. I've got a bachelor's in linguitics. But after graduation became a self-tought frontend developer.</p>
+                        <p>I'm native in Russian and fluent in English and French. My hobbies are computer science, phylosophy, hikes and home workouts.</p>
                     </Hero>
                     <SocialBtns primary bluehover alignLeft />
 
@@ -109,7 +110,6 @@ const about = () => {
             
             <FormContainer>
                 <Main>
-                    {/* <h2>Need to get in touch?</h2> */}
                     <Flexbox>
                         <Form title="Need to get in touch?" />
                         <img src={globe} alt="Girsl with a laptop" />
@@ -149,15 +149,13 @@ const Experience = styled(Container)`
         border-left: 6px solid #5CC0D9;
         margin-top: 3rem;
         padding: 0rem 3rem;
+
+        /* @media (max-width: 768px) {
+            padding: 0rem 3rem;
+        } */
     }
 `
 
-const Line = styled.div`
-    width: 112px;
-    height: 47px;
-    border-bottom: 1px solid black;
-    position: absolute;
-`
 
 const Projects = styled(Container)`
     > div {
@@ -165,6 +163,12 @@ const Projects = styled(Container)`
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         grid-gap: 18px;
+
+        @media (max-width: 768px) {
+            grid-gap: 8px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
     }
 `
 
@@ -185,10 +189,24 @@ const Flexbox = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
     img {
         /* width: 90%; */
         margin-left: 2rem;
         max-width: 30rem;
         justify-self: flex-end;
+
+        /* @media (max-width: 768px) {
+            margin-left: 0rem;
+            margin-top: 2rem;
+            max-width: 20rem;
+        } */
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 `

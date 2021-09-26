@@ -3,15 +3,21 @@ import Link from 'next/link'
 
 const Logo = ({ light }) => {
     return (
+        <Wrapper>
         <Link href="/">
             <Div light={light}>
                 <span>Anastasia</span>Titova
             </Div>
         </Link>
+        </Wrapper>
     );
 }
 
 export default Logo; 
+
+const Wrapper = styled.div`
+`
+
 
 const Div = styled.div`
     font-family: 'Poppins', sans-serif;
@@ -25,4 +31,7 @@ const Div = styled.div`
         color: #BE4357;
     }
 
+    @media (max-width: 768px) {
+        display: none;
+    }
 `

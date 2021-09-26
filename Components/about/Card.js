@@ -49,6 +49,9 @@ const Container = styled.div`
     > div {
         display: flex;
         flex-direction: row;
+        @media (max-width: 768px) {
+          flex-wrap: wrap;
+        }
     }
 
     img {
@@ -61,8 +64,12 @@ const Container = styled.div`
     box-shadow: ${ props => props.type == "project" && "0px 2px 10px 4px #E3E3E3"};
     border-radius: ${ props => props.type == "project" && "10px"};
     padding: ${ props => props.type == "project" && "20px 15px"};
-    margin: ${ props => props.type == "project" && "3rem 0"};
     width: ${ props => props.type == "project" && "100%"};
+    
+
+    @media (max-width: 768px) {
+        margin: ${ props => props.type == "project" && "2rem 0 0 0"};
+    }
 
     a {
         color:#5CC0D9;
@@ -81,8 +88,16 @@ const Title = styled.div`
     margin-bottom: 1rem;
     position: relative;
 
+    @media (max-width: 768px) {
+        flex-direction: column!important;
+    }
+
     p {
         margin: 0;
+        @media (max-width: 768px) {
+            align-self: flex-start;
+            color: rgba(159, 164, 167, 0.49);
+        }
     }
 
     &::before {

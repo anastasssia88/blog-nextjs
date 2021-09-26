@@ -21,17 +21,6 @@ export default function Home() {
           <title>Anastasia Titova</title>
           <link rel="icon" href="/favicon.ico" />
       </Head>
-
-        {/* <Menu>
-          <Box>
-            <Arrow src={arrowLeft} />
-            <Link href="/about"><a>About</a></Link>
-          </Box>
-          <Box>
-            <Link href="/blog"><a>Blog</a></Link>
-            <Arrow src={arrowRight} />
-          </Box>
-        </Menu> */}
       
       <Section dark> 
         <Main>
@@ -39,9 +28,9 @@ export default function Home() {
           <Wrapper>
             <section>
               <div>
-                <p>Computational linguist / developer</p>
-                <h1>Hi, I’m Anastasia</h1>
-                <p>I help build a voice assistant technology. Passionate about web development, Machine Learning, and philosophy.</p>
+                <p>Voice Builder / Web Developer</p>
+                <h1>Hi, I’m Nastya</h1>
+                <p>I enjoy building things and solving problems with JavaScript and Python. Currently helphing to improve a voice assistant technology.</p>
               </div>
               <Btn href="/about" content="Learn more" />
             </section>
@@ -62,8 +51,12 @@ const Wrapper = styled.div`
   margin-top: 5rem;
   display: flex;
   flex-direction: row;
-  /* justify-content:  space-between;
-  align-items: space-between;  */
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
 
   > section {
     display: flex;
@@ -71,11 +64,22 @@ const Wrapper = styled.div`
     justify-content:  space-between;
     align-items: flex-start; 
 
+    @media (max-width: 768px) {
+      justify-content:  center;
+      align-items: center; 
+    }
+
     > div {
       p {
         margin: 1rem 0 2rem 0;
         font-weight: 400;
         font-size: 18px;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          align-self: center;
+          text-align: center;
+        }
       }
 
       p:first-child {
@@ -85,14 +89,26 @@ const Wrapper = styled.div`
         color: rgba(159, 164, 167, 0.49);
         font-weight: 400;
         margin: 0;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
       }
+
       h1, p {
         color: #E5E5E5;
       }
+
       h1 {
         margin-top: 0.5rem;
         font-size: 52px;
         line-height: 1.1;
+        
+        @media (max-width: 768px) {
+          font-size: 44px;
+          align-self: center;
+          text-align: center;
+        }
       }
     }
 
@@ -105,6 +121,11 @@ const AvatarDiv = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center; 
+
+  @media (max-width: 768px) {
+    margin-left: 0rem;
+    margin-top: 3rem;
+  }
 `
 
 
